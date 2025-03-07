@@ -1,0 +1,61 @@
+{%load static%}
+<!DOCTYPE HTML>
+<head>
+  <title>About</title>
+  
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="{% static 'aud2gest/css/about_project.css' %}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body style="overflow-y: hidden;">
+	<nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color: rgb(3, 11, 34); height: 72px;" >
+		<a href="../index"><img src="{% static 'aud2gest/images/Logo_Silent_Voice.png' %}"  width="45px" ></a>
+		<div class="container" style="margin-left: 10px;">
+		  <a class="navbar-brand" href="../home">Two-way ISL Translator</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarResponsive" style="margin-left: 80%;">
+			<ul class="navbar-nav ml-auto" >
+				<li class="nav-item">
+					<a class="nav-link" href="../index">Dashboard</a>
+				  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="../about_project">About </a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="../instruction">Instructions</a>
+			  </li>
+			  {% if user.is_authenticated %}
+				  <li class="nav-item">
+					<a class="nav-link" href="../logout">Logout</a>
+				  </li>
+				  {% else %}
+				  <li class="nav-item">
+					<a class="nav-link" href="../login">Login</a>
+				  </li>
+			  {% endif %}
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+<br><br><br><br>
+<h1 style="font-family: 'Josefin Sans', sans-serif; font-size: 3.5rem; color: rgb(2, 16, 57)"><center>About</center></h1>
+<!-- <img class="image" src="https://templated.co/items/demos/visualize/images/avatar.jpg"/> -->
+<br>
+<h2 style="color : rgba(245, 240, 240, 0.89);font-family: 'Merriweather', serif; font-size: 2rem; font-weight: 150;">The Two-Way Indian Sign Language Translator initiative focused on facilitating real-time communication between sign language users and speakers of spoken language. includes converting gestures to speech, catering to situations where sign language users need to communicate with individuals who do not understand sign language. 
+	The ability to send emergency emails directly from the system ensures quick communication during urgent situations, which is crucial for accessibility and safety.  
+	 </h2>
+<br>
+</body>
+</html>
